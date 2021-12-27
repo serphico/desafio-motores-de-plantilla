@@ -1,0 +1,20 @@
+doctype html
+
+html(style={margin: '5%'})
+  include ../partials/head.pug
+  div(class="contenedorTable")
+    each prod in data
+      table(class="table")
+        thead
+          tr
+            
+            th(scope="col")= prod.title
+
+          tbody
+            tr
+              td
+                img(src=prod.thumbnail)
+            tr    
+              td= '$'+prod.price
+  include ../partials/redirect.pug
+

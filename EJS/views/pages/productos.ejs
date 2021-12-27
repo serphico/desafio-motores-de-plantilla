@@ -1,0 +1,26 @@
+<head>
+    <%-include('../partials/head.ejs')%>
+</head>
+    <div class="contenedorTable">
+    <% data.forEach(function(prod) {%>
+    <table class="table">
+        <thead>
+          <tr>
+            
+            <th scope="col"><%= prod.title%></th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="<%= prod.thumbnail%>" ></td>
+          </tr>
+          <tr>
+            <td>$ <%= prod.price%></td>
+          </tr>
+        </tbody>
+    </table>
+   <%});%>
+</div>
+
+<div>    <%-include('../partials/redirect.ejs')%></div>

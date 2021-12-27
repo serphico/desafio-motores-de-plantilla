@@ -1,0 +1,23 @@
+doctype html
+
+html(style={margin: '5%'})
+  include ../partials/head.pug
+  body
+    h1 Formulario de Ingreso de productos
+    form(action="/productos" enctype="multipart/form-data" method="POST")
+      div(class="mb-3")
+        label(for="Title" class="form-label") Nombre del Producto
+        input(type="text" class="form-control" id="Title" name="title" aria-describedby="Title-Product" required)
+
+      div(class="mb-3")
+        label(for="Price" class="form-label") Precio
+        input(type="number" class="form-control" id="Price" name="price" required)
+
+      div(class="input-group mb-3")
+
+        label(class="input-group-text" for="inputGroupFile01") Subir
+        input(type="file" class="form-control" id="inputGroupFile01" name="thumbnail")
+
+        button(type="submit" class="btn btn-primary") Submit
+
+    include ../partials/redirect.pug

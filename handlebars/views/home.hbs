@@ -1,0 +1,17 @@
+<body>
+<h1>Formulario de Ingreso de productos</h1>
+<form action="/productos" enctype="multipart/form-data" method="POST">
+  <div class="mb-3">
+    <label for="Title" class="form-label">Nombre del Producto</label>
+    <input type="text" class="form-control" id="Title" name="title" aria-describedby="Title-Product" required>
+  </div>
+  <div class="mb-3">
+    <label for="Price" class="form-label">Precio</label>
+    <input type="number" class="form-control" id="Price" name="price" required>
+  </div>
+  <div class="input-group mb-3">
+    <label class="input-group-text" for="inputGroupFile01">Subir</label>
+    <input type="file" class="form-control" id="inputGroupFile01" name="thumbnail">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
